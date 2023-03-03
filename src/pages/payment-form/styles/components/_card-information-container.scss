@@ -1,0 +1,63 @@
+@import "../../../../global-styles/styles/root.scss";
+
+.payment-form-component__card-information-container {
+    --margin-top-cic-input: 27px;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: 15px;
+
+    .payment-form-component__input-component:first-child {
+        max-width: 261px;
+        display: flex;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1;
+        padding-right: 2px;
+        margin-bottom: 0;
+
+        .payment-form-component__input {
+            margin-top: var(--margin-top-cic-input);
+        }
+    }
+
+    .payment-form-component__input-component:last-child {
+        max-width: 163px;
+        display: flex;
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row: 1;
+        margin-left: 2px;
+        margin-bottom: 0;
+
+        .payment-form-component__input {
+            margin-top: var(--margin-top-cic-input);
+            margin-left: 23px;
+        }
+    }
+
+    @include tablet() {
+        .payment-form-component__input-component:last-child {
+            .payment-form-component__input {
+                margin-left: 24px;
+            }
+        }
+    }
+
+    @include mobile() {
+        width: calc(100% - 16px);
+        gap: 0px;
+
+        .payment-form-component__input-component:last-child {
+            margin-left: 17px;
+
+            .payment-form-component__input {
+                margin-left: 24px;
+            }
+        }
+
+    }
+}

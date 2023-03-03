@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <link rel="stylesheet" href="src/global-styles/style.css" />
+  <link rel="stylesheet" href="src/pages/payment-form/styles/payment-form.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment data entry form</title>
+</head>
+
+<body>
+  <div class="payment-form">
+
+    <div class="payment-form__cards-image">
+      <img class="cards-image" src="public/images/pay-to-cards-image.png" />
+    </div>
+    <div class="payment-form__pay-to-component">
+      <img class="pay-to-component__pay-to-image" src="public/images/pay-to.svg" />
+      <div class="pay-to-component__pay-to-text">PayTo</div>
+    </div>
+
+    <div class="payment-form-component">
+
+      <div class="payment-form-component__title">Add your
+        informations</div>
+      
+      <div class="payment-form-component__input-component">
+        <input id="name-on-card" class="input-component__input" value="John Doe" required>
+        <div class="input-component__label">Name on card</div>
+      </div>
+
+      <div class="payment-form-component__input-component">
+        <input id="card-number" class="input-component__input" value="1234 3243 1571 3145" required>
+        <div class="input-component__label">Card number</div>
+      </div>
+
+      <div class="payment-form-component__card-information-container">
+        <div class="payment-form-component__input-component">
+          <input id="card-expiry-date" class="input-component__input" value="05/25" required>
+          <div class="input-component__label">Expiry date (MM/YY)</div>
+        </div>
+        <div class="payment-form-component__input-component">
+          <input id="card-cvv" class="input-component__input" type="number" value="415" required>
+          <div class="input-component__label">CVV</div>
+        </div>
+      </div>
+
+      <button id="next-step-button" class="payment-form-component__next-step-button">Next step</button>
+    </div>
+
+
+  </div>
+
+  <!-- <script type="module" src="/src/global-scripts/main.js"></script> -->
+  <script type="module" src="/src/pages/payment-form/scripts/payment-form.js"></script>
+</body>
+
+</html>

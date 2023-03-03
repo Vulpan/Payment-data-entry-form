@@ -1,0 +1,45 @@
+@import "../../../../global-styles/styles/root.scss";
+
+.payment-form-component { 
+    #{&}__next-step-button {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      margin-top: 34px;
+      color: var(--color-white);
+      @include semibold16();
+      background: var(--color-primary);
+      border-radius: 18px;    
+      transition: all 1s;  
+      border: none;  
+    }
+  
+    #{&}__next-step-button:hover {
+      background: var(--color-primary-hover);
+    }
+  
+    #{&}__next-step-button:active {
+      background: var(--color-primary-active);
+    }
+  
+    #{&}__next-step-button:disabled {
+      background: var(--color-primary-inactive);
+    }
+
+    @include tablet() {
+        #{&}__next-step-button {
+            margin-left: 1px;
+            margin-bottom: 100px;
+        }
+    }
+
+    @include mobile() {
+        #{&}__next-step-button {            
+            width: calc(100% - 16px);
+        }
+    }
+    
+  }

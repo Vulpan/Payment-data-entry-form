@@ -1,0 +1,79 @@
+@import "../../../global-styles/styles/root.scss";
+@import "components/payment-form-component.scss";
+@import "components/pay-to-component.scss";
+@import "components/input-component.scss";
+@import "components/card-information-container.scss";
+@import "components/next-step-button.scss";
+
+.payment-form {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+
+  #{&}__cards-image {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: -7px;
+    justify-self: end;
+    align-self: center;
+
+    .cards-image {
+      width: inherit;
+      height: inherit;
+    }
+
+    @media (min-width: 1440px) {
+      width: auto;
+    }
+  }
+
+  @include tablet() {
+    grid-template-columns: 1fr;
+
+    #{&}__pay-to-component {
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      margin: 48px 0 0 376px;
+    }
+
+    #{&}__pay-to-text {
+      color: var(--color-text);
+      @include semibold18();
+    }
+
+    #{&}__cards-image {
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      max-height: 574px;
+      background-image: url("../../../../public/images/pay-to-cards-image-tablet.png");
+
+      .cards-image {
+        opacity: 0.0;
+      }
+    }
+  }
+
+  @include mobile() {
+    grid-template-columns: 1fr;
+
+    #{&}__cards-image {
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      justify-self: start;
+      background-image: url("../../../../public/images/pay-to-cards-image-mobile.png");
+      margin: 0;
+
+      .cards-image {
+        opacity: 0.0;
+      }
+    }
+  }
+}

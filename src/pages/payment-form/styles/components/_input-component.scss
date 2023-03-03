@@ -1,0 +1,69 @@
+@import "../../../../global-styles/styles/root.scss";
+
+.payment-form-component__input-component {
+    --margin-top-cic-input: 27px;
+
+    max-width: 438px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 14px;
+    margin-left: -1px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    transition: all 1s;
+
+    .input-component__input {
+        max-width: 100%;
+        max-height: 17px;
+        width: calc(100% - (24px * 2));
+        box-sizing: border-box;
+        margin: 28px 24px 10px 24px;
+        padding: 0;
+        color: var(--color-text);
+        @include medium16();
+    }
+
+    .input-component__label {
+        color: var(--color-light-text);
+        @include medium12();
+        font-size: 16px;
+        position: absolute;
+        pointer-events: none;
+        top: 22px;
+        left: 24px;
+        transition: all 0.1s ease;
+    }
+
+    .input-component__input:focus~.input-component__label,
+    .input-component__input:not(:focus):valid~.input-component__label {
+        top: 12px;
+        font-size: 12px;
+        opacity: 1;
+    }
+
+    .input-component__input-container:has(input:not(input:valid):not(input:focus)):hover {
+        border-color: var(--color-border-hover);
+    }
+
+    .input-component__input-container:has(input:focus) {
+        border-color: var(--color-border-focus);
+    }
+
+    @include tablet() {
+        margin-left: 0px;
+    }
+
+    @include mobile() {
+        max-width: 100%;
+        width: calc(100% - 18px);
+        margin-left: 0px;
+
+        .input-component__input {
+            margin: 28px 24px 10px 23px;
+        }
+
+        .input-component__label {
+            left: 24px - 1px;
+        }        
+    }
+}

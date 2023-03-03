@@ -1,0 +1,72 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+:root {
+    --color-primary: #2162E3;
+    --color-text: #0D1016;
+    --color-light-text: #AEB5C3;
+    --color-border: #DADFE9;
+    --color-background: #F8FAFF;
+    --color-white: #FFFFFF;
+    --color-primary-hover: #3A78F4;
+    --color-primary-active: #1957D4;
+    --color-primary-inactive: #EBEFF5;
+    --color-border-hover: #ABB5C8;
+    --color-border-focus: #0D1016;
+    --color-light-text-hover: #8A94A8;    
+}
+
+@mixin semibold40() {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+}
+
+@mixin semibold24() {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+}
+
+@mixin semibold18() {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+}
+
+@mixin semibold16() {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+}
+
+@mixin medium12() {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+}
+
+@mixin medium16() {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+}
+
+@mixin tablet() {
+    @media (min-width: 501px) and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media (max-width: 500px) {
+        @content;
+    }
+}

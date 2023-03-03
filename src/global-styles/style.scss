@@ -1,0 +1,26 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-primary);
+}
+
+input {
+  border: none;
+  text-decoration: none;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+  background: transparent;
+}
+
+input:active {
+  background: transparent;
+}

@@ -1,0 +1,34 @@
+@import "../../../../global-styles/styles/root.scss";
+
+.payment-form__pay-to-component {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    margin: 64px 0 0 64px;
+    display: flex;
+
+    .pay-to-component__pay-to-image {
+        max-width: 20.25px;
+        max-height: 20.25px;
+        margin-right: 9px;
+    }
+
+    .pay-to-component__pay-to-text {
+        color: var(--color-text);
+        @include semibold18();
+    }
+
+    @include tablet() {
+        grid-column: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 48px 0 0 376px;
+    }
+
+    @include mobile() {
+        grid-column: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 32px 0 0 146px;
+    }
+}
